@@ -1,5 +1,9 @@
 :root{
     --bg-color: #94d0e9;
+    --font-color: #ca547c;
+    --black: #03071e;
+    --yellow-main: #d6ce42;
+    --white-font: #FFFDEC;
 }
 
 /* *{outline: 1px solid #f00;} */
@@ -9,7 +13,9 @@
     grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
     place-items: center;
-    width: clamp(280px, 100%, 400px);
+    /* - inset .cart before */
+    width: calc(100vw - 16px);
+    max-width: 600px;
     max-height: 300px;
     contain: cover;
     aspect-ratio: 85.6 / 54;
@@ -17,15 +23,13 @@
     border-image: linear-gradient(45deg, navy, yellow) 1;
     border-radius: .5rem;
     padding: .5rem;
-    /* margin: .5rem; */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    /* overflow: hidden; */
 }
 
 .card::before {
     content: "";
     position: absolute;
-    inset: -6px; 
+    inset: -8px; 
     background: repeating-linear-gradient(
         -45deg,
         black 0%,
@@ -38,10 +42,136 @@
 }
 
 
+.card .screw{
+    position: absolute;
+}
+
+.card .screw0{
+    top: 1rem;
+    left: 1rem;
+}
+
+.card .screw1{
+    top: 1rem;
+    right: 1rem;
+}
+
+.card .screw2{
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.card .screw3{
+    bottom: 1rem;
+    right: 1rem;
+}
+
 .title__card{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
+
+.title-txt__card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: .25rem;
+    width: 100%;
+}
+
+.labour-type__card{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: .7rem;
+}
+
+.brand-name__card{
+    align-self: center;
+    background: var(--black);
+    color: var(--yellow-main);
+    padding: .5rem 1rem;
+    width: fit-content;
+    border-radius: 1.5rem;
+    outline: 2px solid var(--font-color);
+}
+
+h1,
+.labour-type__card span {
+    color: var(--font-color);
+    width: fit-content;
+    font-size: clamp(.7rem, 1.35rem, 3rem);
+    font-weight: 600;
+    letter-spacing: .2rem;
+    text-shadow: 1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 2px 0 #000;
+}
+
+/* desktop */
+
+@media screen and (min-width: 460px) {
+    h1,
+    .labour-type__card span{
+        font-size: clamp(.7rem, 2rem, 3rem);
+    }
+}
+
+/* ul styles */
+
+.materials-we-work__card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .115rem;
+    width: 100%;
+    margin-left: 1rem;
+    background: var(--black);
+    color: var(--white-font);
+    font-weight: 500;
+}
+
+.material-item__card{
+    list-style-type: '🔩';
+}
+
+.bottom__card{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 1rem; */
+    width: 100%;
+}
+
+.location__card{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-info__card{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.whatsapp__card a,
+.facebook__card a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.whatsapp__card svg,
+.facebook__card svg{
+    transition: all .3s ease-in-out;
+}
+
+.whatsapp__card svg:hover,
+.whatsapp__card svg:active,
+.whatsapp__card svg:focus,
+.facebook__card svg:hover,
+.facebook__card svg:active,
+.facebook__card svg:focus{
+    transform: scale(1.1);
+} 
 
