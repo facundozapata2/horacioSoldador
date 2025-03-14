@@ -1,10 +1,4 @@
-:root{
-    --bg-color: #94d0e9;
-    --font-color: #ca547c;
-    --black: #03071e;
-    --yellow-main: #d6ce42;
-    --white-font: #FFFDEC;
-}
+@import url('variables.css');
 
 /* *{outline: 1px solid #f00;} */
 .card{
@@ -96,12 +90,12 @@
     padding: .5rem 1rem;
     width: fit-content;
     border-radius: 1.5rem;
-    outline: 2px solid var(--font-color);
+    outline: 2px solid var(--red);
 }
 
 h1,
 .labour-type__card span {
-    color: var(--font-color);
+    color: var(--red);
     width: fit-content;
     font-size: clamp(.7rem, 1.35rem, 3rem);
     font-weight: 600;
@@ -124,12 +118,21 @@ h1,
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .115rem;
-    width: 100%;
+    width: calc(100% - 1rem);
     margin-left: 1rem;
     background: var(--black);
     color: var(--white-font);
     font-weight: 500;
 }
+
+@media screen and (max-width: 320px) {
+    .labour-type__card
+   .materials-we-work__card{
+    font-size: .7rem;
+    width: 280px;
+    place-content: center;
+   } 
+}  
 
 .material-item__card{
     list-style-type: '🔩';
@@ -173,5 +176,5 @@ h1,
 .facebook__card svg:active,
 .facebook__card svg:focus{
     transform: scale(1.1);
-} 
+}
 

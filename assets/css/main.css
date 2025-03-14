@@ -1,0 +1,47 @@
+@import url('variables.css');
+
+.main-header{
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: var(--white-font);
+    width: calc(100vw - 16px);
+    padding: .5rem 0;   
+}
+
+.main-header::before{
+        content: "";
+        position: absolute;
+        inset: -8px; 
+        background: repeating-linear-gradient(
+            -45deg,
+            black 0%,
+            black 10%,
+            yellow 10%,
+            yellow 20%
+        );
+        z-index: -1; 
+        border-radius: .5rem; 
+}
+
+.main-header h4{
+    width: 100%;
+    text-align: center;
+    color: var(--yellow-main);
+    font-size: clamp(2rem, 13vw, 6rem);
+    font-weight: 900;
+    /* font-stretch: expanded; */
+    background: var(--black);
+    padding: 0 .5rem;
+    border-radius: .5rem;
+}
+
+.main-header h2{
+    color: var(--red);
+    font-family: 'italiana';
+    font-weight: 700;
+    word-spacing: .6rem;
+}
