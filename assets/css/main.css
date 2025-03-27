@@ -1,6 +1,7 @@
 @import url('variables.css');
 
 .main-header{
+    width: calc(100% - 16px);
     margin-top: .5rem;
     display: flex;
     justify-content: center;
@@ -8,7 +9,7 @@
     flex-direction: column;
     position: relative;
     background: var(--white-font);
-    width: calc(100vw - 16px);
+    /* width: 100vw; */
     padding: .5rem 0;   
 }
 
@@ -44,4 +45,30 @@
     font-family: 'italiana';
     font-weight: 700;
     word-spacing: .6rem;
+}
+
+@media screen and (max-width: 1054px) {
+    aside{
+        /* display: none; */
+        width: 0;
+    }
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.card{
+
+}
+
+aside > img{
+    width: 100%;
+    max-height: 400px;
+    min-height: 200px;
+    object-fit: cover;
 }

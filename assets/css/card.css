@@ -10,11 +10,10 @@
     /* - inset .cart before */
     width: calc(100vw - 16px);
     max-width: 600px;
-    max-height: 300px;
-    contain: cover;
+    height: clamp(300px, 350px, 700px);
     aspect-ratio: 85.6 / 54;
     background: var(--bg-color);
-    border-image: linear-gradient(45deg, navy, yellow) 1;
+    /* border-image: linear-gradient(45deg, navy, yellow); */
     border-radius: .5rem;
     padding: .5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -79,8 +78,7 @@
 .labour-type__card{
     display: flex;
     justify-content: center;
-    align-items: baseline;
-    gap: .7rem;
+    gap: .5rem;
 }
 
 .brand-name__card{
@@ -97,7 +95,8 @@ h1,
 .labour-type__card span {
     color: var(--red);
     width: fit-content;
-    font-size: clamp(.7rem, 1.35rem, 3rem);
+    text-align: center;
+    font-size: clamp(.7rem, 1.15rem, 3rem);
     font-weight: 600;
     letter-spacing: .2rem;
     text-shadow: 1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 2px 0 #000;
@@ -117,21 +116,23 @@ h1,
 .materials-we-work__card{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    /* text-align: left; */
+    width: 100%;
+    /* max-width: 300px; */
     gap: .115rem;
-    width: calc(100% - 1rem);
-    margin-left: 1rem;
     background: var(--black);
     color: var(--white-font);
     font-weight: 500;
+    padding: 0 1rem;
+    /* margin-left: -2.55rem; */
 }
 
 @media screen and (max-width: 320px) {
-    .labour-type__card
    .materials-we-work__card{
-    font-size: .7rem;
-    width: 280px;
-    place-content: center;
-   } 
+    margin-left: -.45rem;
+    /* width: 300px; */
+} 
 }  
 
 .material-item__card{
@@ -148,7 +149,6 @@ h1,
 .location__card{
     display: flex;
     flex-direction: column;
-
 }
 
 .contact-info__card{
