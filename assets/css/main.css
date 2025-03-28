@@ -47,12 +47,6 @@
     word-spacing: .6rem;
 }
 
-@media screen and (max-width: 1054px) {
-    aside{
-        /* display: none; */
-        width: 0;
-    }
-}
 
 .wrapper{
     display: grid;
@@ -62,9 +56,21 @@
     width: 100%;
 }
 
-.card{
-
+@media screen and (max-width: 1054px) {
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .card{
+        order: 1;
+        place-self: center;
+    }
+    aside{
+        order: 2;
+    }
 }
+
+
 
 aside > img{
     width: 100%;
@@ -72,3 +78,16 @@ aside > img{
     min-height: 200px;
     object-fit: cover;
 }
+
+
+.whatsapp-fixed{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+}
+
+.whatsapp-fixed i{
+    color: #2ecc71;
+}
+
