@@ -89,8 +89,8 @@
     width: fit-content;
     border-radius: 1.5rem;
     outline: 2px solid var(--red);
-}
 
+}
 h1,
 .labour-type__card span {
     color: var(--red);
