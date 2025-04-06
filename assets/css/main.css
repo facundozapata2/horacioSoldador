@@ -84,6 +84,7 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+    z-index: 1000;
 
 }
 
@@ -155,6 +156,13 @@
     text-align: center;
     grid-template-columns: 1fr;
     gap: .5rem;
+}
+
+@media screen and (min-width: 786px){
+    .highlights{
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 .highlight{

@@ -11,7 +11,7 @@
     place-items: center;
     /* - inset .cart before */
     width: calc(100vw - 16px);
-    max-width: 600px;
+    max-width: calc(780px - 16px);
     height: clamp(300px, 350px, 700px);
     aspect-ratio: 85.6 / 54;
     background: var(--bg-color);
