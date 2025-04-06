@@ -149,6 +149,51 @@
   color: var(--yellow-main);
 }
 
+.highlights{
+    width: calc(100% - 16px);
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+.highlight{
+    background: var(--bg-color);
+    position: relative;
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+    transition: transform 0.3s ease;
+}
+  
+.highlight::before{
+    content: "";
+    position: absolute;
+    inset: -8px;
+    background: repeating-linear-gradient(
+      -45deg,
+      black 0%,
+      black 10%,
+      yellow 10%,
+      yellow 20%
+    );
+    z-index: -1;
+    border-radius: .5rem;
+}
+
+.highlight i{
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+  
+.highlight p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+  
+
+
 .main-footer{
     position: relative;
     width: calc(100% - 16px);
